@@ -54,9 +54,10 @@ public class UserController {
     }
 
     @RequestMapping(value = "/secu", method = RequestMethod.GET)
-    public void secu(String pwd) {
+    public void secu() {
+        User user = new User();
 
-        String rawPassword = String.valueOf(userService.getPassword(pwd));                //인코딩 전 메서드
+        String rawPassword = String.valueOf(userService.getPassword(user.getPwd()));                //인코딩 전 메서드
         String encodePassword;                        // 똑같은 비밀번호 데이터를 encdoe()메서드를 사용했을 때 동일한 인코딩된 값이 나오는지 확인하기 위해 추가
 
         encodePassword = passwordEncoder.encode(rawPassword);

@@ -1,5 +1,5 @@
 # 2023/11/11 테스트 결과
 ### UserTest 
-<div style="color:green">SUCCESS</div>
+<span style="color:green">SUCCESS</span>
 ### UserControllerTest  
-<div style="color:red">FAIL</div>
+<span style="color:red">FAIL</span>

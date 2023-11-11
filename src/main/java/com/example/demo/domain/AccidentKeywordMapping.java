@@ -1,7 +1,6 @@
 package com.example.demo.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
 
 /*
  * created on 2023/11/11

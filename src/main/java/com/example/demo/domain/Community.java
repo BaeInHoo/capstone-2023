@@ -17,16 +17,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 public class Community {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long board_no;
 
+    @Column(name = "user_id")
     public String user_id;
 
 //    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn("user_id")
+//    @JoinColumn(name = "user_id")
 //    public User user;
 
     private LocalDateTime up_date;

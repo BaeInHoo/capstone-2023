@@ -24,13 +24,15 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String chat_no;
 
-    @NotNull
-    @Column(name = "board_id")
-    public String board_id;
+    @Id
+    @JoinColumn(name = "BOARD_NO")
+    @ManyToOne
+    public Community community;
 
-    @NotNull
-    @Column(name = "user_id")
-    private String user_id;
+    @Id
+    @JoinColumn(name = "USER_ID")
+    @ManyToOne
+    private User user;
 
     @NotEmpty
     private String chat_text;

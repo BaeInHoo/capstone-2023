@@ -24,8 +24,10 @@ public class Community {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long board_no;
 
-    @Column(name = "user_id")
-    public String user_id;
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private User user;
 
 //    @ManyToOne(fetch = FetchType.EAGER)
 //    @JoinColumn(name = "user_id")

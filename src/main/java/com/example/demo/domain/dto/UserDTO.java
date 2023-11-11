@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto;
+package com.example.demo.domain.dto;
 
 import jakarta.persistence.Table;
 import lombok.*;

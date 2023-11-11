@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto;
+package com.example.demo.domain.dto;
 
 import com.example.demo.domain.Community;
 import com.example.demo.domain.User;

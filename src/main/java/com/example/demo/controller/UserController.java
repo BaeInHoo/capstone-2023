@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.dto.UserDTO;
+import com.example.demo.domain.dto.UserDTO;
 import com.example.demo.domain.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;

@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.controller.dto.UserDTO;
+import com.example.demo.domain.dto.UserDTO;
 import com.example.demo.domain.User;
 import com.example.demo.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;

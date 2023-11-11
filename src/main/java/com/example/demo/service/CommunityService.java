@@ -1,11 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.controller.dto.CommunityDTO;
-import com.example.demo.controller.dto.UserDTO;
 import com.example.demo.domain.Community;
-import com.example.demo.domain.User;
 import com.example.demo.repository.CommunityRepository;
-import com.example.demo.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;

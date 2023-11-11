@@ -19,11 +19,9 @@ public class Search {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String search_no;
 
-    @Id
     @Column(name = "LAW_NO")
     private String law_no;
 
-    @Id
     @Column(name = "USER_ID")
     private String user_id;
 

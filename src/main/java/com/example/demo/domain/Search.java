@@ -21,6 +21,11 @@ public class Search {
 
     @Id
     @Column(name = "LAW_NO")
-    private
+    private String law_no;
 
+    @Id
+    @Column(name = "USER_ID")
+    private String user_id;
+
+    private String law_search;
 }

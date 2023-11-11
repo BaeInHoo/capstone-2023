@@ -24,11 +24,12 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String chat_no;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(referencedColumnName = "board_no")
-    public List<Community> communities;
+    @NotNull
+    @Column(name = "board_id")
+    public String board_id;
 
     @NotNull
+    @Column(name = "user_id")
     private String user_id;
 
     @NotEmpty

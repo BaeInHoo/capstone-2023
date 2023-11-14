@@ -20,6 +20,12 @@ public class SecurityConfig {
                 .withUser(user.getUser_id())
                 .password(user.getPwd())
                 .roles("USER");
+
+        auth.inMemoryAuthentication()
+                .passwordEncoder(passwordEncoder)
+                .withUser("admin")
+                .password("1234")
+                .roles("ADMIN");
     }
 
     @Bean

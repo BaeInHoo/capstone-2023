@@ -5,6 +5,10 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 /*
+ * AccResult Table을 구성한다.
+ * PK는 acc_no 이며
+ * @param user 는 User 테이블과 식별자 관게를 가진다
+ *
  * created on 2023/11/11
  * */
 @Getter

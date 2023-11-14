@@ -9,6 +9,10 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 /*
+ * Community Table을 구성한다.
+ * PK는 board_no 이며
+ * @param user 는 User 테이블과 식별자 관게를 가지는 FK이다
+ *
  * created on 2023/11/01
  * */
 @Getter

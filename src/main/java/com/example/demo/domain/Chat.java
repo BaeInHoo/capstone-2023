@@ -9,6 +9,11 @@ import lombok.*;
 import java.util.List;
 
 /*
+ * Chat Table을 구성한다.
+ * PK는 chat_no 이며
+ * @param user 는 User 테이블과 식별자 관게를 가지는 FK이다
+ * @param community 는 Community 테이블과 식별자 관게를 가지는 FK이다
+ *
  * created on 2023/11/03
  * */
 @Getter

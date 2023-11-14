@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 import lombok.*;
 
 /*
+* Search Table을 구성한다
+* PK는 @param search_no 이다
+* @param law_no 와 @param user_id 는
+* 각각 Law 테이블, User 테이블과 비식별자 관게를 가진다
+*
 * created on 2023/11/11
 *  */
 @Getter

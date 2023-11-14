@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 /*
+ * VideoData Table 이다
+ * PK는 @param vid_id 이다
+ *
  * created on 2023/11/11
  * */
 @Getter

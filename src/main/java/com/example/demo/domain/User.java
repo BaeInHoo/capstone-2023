@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /*
+ * User Table을 구성한다
+ * PK는 @param user_id 이다
+ *
  * created on 2023/11/01
  * */
 @Entity

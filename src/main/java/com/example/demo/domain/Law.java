@@ -8,6 +8,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 /*
+* Law Table을 구성한다
+* PK는 law_no 이다
+*
 * created on 2023/11/11
 * */
 @Getter

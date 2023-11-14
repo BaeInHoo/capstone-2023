@@ -46,4 +46,5 @@ public class Community {
     @Transient
     @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     public boolean destroy;
+
 }

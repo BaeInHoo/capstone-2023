@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.Community;
+import com.example.demo.domain.User;
 import com.example.demo.repository.CommunityRepository;
 import com.example.demo.service.CommunityService;
 import lombok.extern.slf4j.Slf4j;
@@ -25,8 +26,8 @@ public class CommunityController {
     private CommunityRepository communityRepository;
 
     @GetMapping("/{id}")
-    public String getCommunity(@RequestParam(required = false, defaultValue = "1") Long board_no) {
-        return communityService.getCommunity(board_no).getUser_id();
+    public User getCommunity(@RequestParam(required = false, defaultValue = "1") Long board_no) {
+        return communityService.getCommunity(board_no).getUser();
     }
 
     @PostMapping

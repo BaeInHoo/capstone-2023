@@ -21,10 +21,10 @@ class UserTest {
                 .pwd("1234")
                 .kakao("#$@dsfsef")
                 .build();
-
         assertThat(user.getUser_id());
         assertThat(user.getName());
         assertThat(user.getUser_add());
 
     }
+
 }

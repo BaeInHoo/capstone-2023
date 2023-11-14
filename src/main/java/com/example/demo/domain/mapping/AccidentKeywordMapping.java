@@ -1,5 +1,7 @@
-package com.example.demo.domain;
+package com.example.demo.domain.mapping;
 
+import com.example.demo.domain.AccidentResult;
+import com.example.demo.domain.Keyword;
 import jakarta.persistence.*;
 
 /*

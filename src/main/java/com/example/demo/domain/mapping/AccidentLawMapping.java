@@ -1,5 +1,6 @@
-package com.example.demo.domain;
+package com.example.demo.domain.mapping;
 
+import com.example.demo.domain.AccidentResult;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.web.bind.annotation.Mapping;

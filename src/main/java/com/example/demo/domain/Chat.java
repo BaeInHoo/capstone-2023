@@ -17,7 +17,6 @@ import java.util.List;
  * created on 2023/11/03
  * */
 @Getter
-@Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor

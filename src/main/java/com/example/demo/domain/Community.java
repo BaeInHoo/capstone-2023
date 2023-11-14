@@ -16,7 +16,6 @@ import java.time.LocalDateTime;
  * created on 2023/11/01
  * */
 @Getter
-@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor

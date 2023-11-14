@@ -7,7 +7,6 @@ import lombok.*;
  * created on 2023/11/11
  * */
 @Getter
-@Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor

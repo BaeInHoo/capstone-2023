@@ -11,12 +11,17 @@ import org.springframework.transaction.annotation.Transactional;
 /*
 * created on 2023/11/01
 * */
-@Service
+
 @Slf4j
+@Service
 public class UserService {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
 
     /* 유저 정보 유저 아이디 통해 받아오기 */
@@ -33,9 +38,7 @@ public class UserService {
     @Transactional
     public User getPassword(String pwd) {
 
-        User user = (User) userRepository.findByPasswd(pwd).orElseThrow(() -> new RuntimeException("비밀번호가 존재하지 않습니다"));
-
-        return user;
+        return (User) userRepository.findByPasswd(pwd).orElseThrow(() -> new RuntimeException("비밀번호가 존재하지 않습니다"));
     }
 
     @Transactional
@@ -45,10 +48,10 @@ public class UserService {
 
     @Transactional
     public void update(String id, UserDTO userDto) {
-        User userAtDb = userRepository.findById(id).orElseThrow(() -> new RuntimeException("아이디가 존재하지 않습니다."));
+        User userAtDb = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("아이디가 존재하지 않습니다."));
 
         if (!userAtDb.getName().equals(userDto.getName())) {
-            throw new RuntimeException("이름이 다릅니다");
+            throw new IllegalArgumentException("이름이 다릅니다");
         }
 
         userAtDb.setName(userDto.getName());
@@ -63,7 +66,7 @@ public class UserService {
 
     @Transactional
     public void delete(String id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("아이디가 존재하지 않습니다"));
+        User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("아이디가 존재하지 않습니다"));
 
         userRepository.deleteById(id);
 

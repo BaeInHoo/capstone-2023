@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /*
@@ -16,18 +17,23 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/users")
 @Slf4j
+@Controller
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     BCryptPasswordEncoder passwordEncoder;
 
+    @Autowired
+    public UserController(UserService userService, UserRepository userRepository) {
+        this.userService = userService;
+        this.userRepository = userRepository;
+    }
+
     @GetMapping("/{id}")
-    public User getUser(@RequestParam(required = false, defaultValue = "20231028Admin") String id) {
+    public User getUser(@RequestParam(required = false) String id) {
         return userService.getUser(id);
     }
 

@@ -25,6 +25,7 @@ public class Community {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter
     private Long board_no;
 
     @Id
